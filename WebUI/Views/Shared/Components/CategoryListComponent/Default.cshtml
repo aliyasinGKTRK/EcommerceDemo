@@ -1,0 +1,14 @@
+﻿@model CategoryListModel
+
+ <div class="list-group">
+             <a  href="/Home/Index" class="list-group-item list-group-item-action active"> Tüm Ürünler</a>
+
+     @foreach (var item in Model.Categories)
+    {
+            
+            <a  asp-controller="Shop" asp-action="List"asp-route-category="@item.Name.ToLower()"
+            class="list-group-item list-group-item-action " > @item.Name</a>
+        
+    }
+   
+ </div>
